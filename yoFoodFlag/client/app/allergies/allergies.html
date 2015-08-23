@@ -1,0 +1,152 @@
+<center>
+    <h1>Enter your Allergies</h1>
+</center>
+<br>
+
+<div class="col-md-12">
+    <div class="container">
+
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Milk: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.milk">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Soy: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.soy">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Wheat: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.wheat">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Egg: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.egg">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Peanut: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.peanut">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Tree Nut: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.tree_nut">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Fish: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.fish">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-6 control-label">Shellfish: </label>
+
+                <div class="col-sm-6">
+                    <select ng-model="allergies.shellfish">
+                        <option value="">---Please select an allergy level---</option>
+                        <option value="0">0 - no reaction</option>
+                        <option value="1">1 - mild reaction</option>
+                        <option value="2">2 - less severe reaction</option>
+                        <option value="3">3 - severe reaction</option>
+                        <option value="4">4 - more severe reaction</option>
+                        <option value="5">5 - most severe reaction</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+                    <button ng-click='addAllergies()'>Add Allergies</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+

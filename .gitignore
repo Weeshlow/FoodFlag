@@ -1,0 +1,13 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+.idea
+ionFoodFlag/node_modules/
+ionFoodFlag/platforms/
+ionFoodFlag/plugins/
+
+yoFoodFlag/node_modules
+yoFoodFlag/.tmp
+yoFoodFlag/client/bower_components
+yoFoodFlag/server/config/local.env.js
+yoFoodFlag/npm-debug.log
