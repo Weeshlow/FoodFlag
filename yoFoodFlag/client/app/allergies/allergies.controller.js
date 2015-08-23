@@ -29,6 +29,7 @@ angular.module('yoFoodFlagApp')
 
             var profileRef = new Firebase(FURL + "profile/");
             profileRef.child($scope.currentUser.profile.uid).set(profile);
+            toaster.pop('success', "Allergies Changed successfully");
         }
 
     });

@@ -1,3 +1,60 @@
-<div class="col-md-12">
+<div class="col-md-offset-3 col-md-6">
     <center><h1>Welcome to Food Flag</h1></center>
+    <h4>
+        <p>
+            With this app, we are trying to make it easier for people
+            with allergies to order food safely at restaurants.
+        </p>
+
+        <div ng-hide="signedIn();">
+            <ol>
+                <li>
+                    Please create an account:
+                    <a href="/register">
+                        <button class="btn btn-info">
+                            Register
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    Please login:
+                    <a href="/login">
+                        <button class="btn btn-info">
+                            Login
+                        </button>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div ng-show="signedIn();">
+            <ol>
+                <li>
+                    Please enter your allergy information:
+                    <a href="/allergies">
+                        <button class="btn btn-info">
+                            Allergies
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    Please select a restaurant nearby:
+                    <a href="/restMap">
+                        <button class="btn btn-info">
+                            Restaurant Map
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    Logout when done:
+                    <a href="/home" ng-click="logout()">
+                        <button class="btn btn-info">
+                            <i class="fa fa-sign-out"></i> Logout
+                        </button>
+                    </a>
+
+                </li>
+            </ol>
+        </div>
+    </h4>
+
 </div>
