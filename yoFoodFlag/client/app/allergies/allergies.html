@@ -6,154 +6,92 @@
 <div class="col-md-12">
     <div class="container">
 
+        <div class="row col-sm-offset-3 col-sm-6">
+            <button class="btn btn-primary" ng-click="orderBy='';">No Sort</button>
+            <button class="btn btn-primary" ng-click="orderBy='order';">Report</button>
+            <button class="btn btn-primary" ng-click="orderBy=catSort;">Category</button>
+            <button class="btn btn-primary" ng-click="orderBy='item';">Alphabetical</button>
+        </div>
+        <div class="row col-sm-offset-3 col-sm-6">
+            <label>
+                Level 5:
+                <input type="checkbox" ng-model="showLevel.level5">
+            </label>
+            <label>
+                Level 4:
+                <input type="checkbox" ng-model="showLevel.level4">
+            </label>
+            <label>
+                Level 3:
+                <input type="checkbox" ng-model="showLevel.level3">
+            </label>
+            <br>
+            <label>
+                Level 2:
+                <input type="checkbox" ng-model="showLevel.level2">
+            </label>
+            <label>
+                Level 1:
+                <input type="checkbox" ng-model="showLevel.level1">
+            </label>
+            <label>
+                Level 0:
+                <input type="checkbox" ng-model="showLevel.level0">
+            </label>
+        </div>
+        <br><br><br>
+
         <form class="form-horizontal">
 
             <div class="form-group">
-                <label class="col-sm-6 control-label"><span
-                        class="milk">Milk:&nbsp;&nbsp;{{currentUser.profile.milk}}</span>
-                </label>
+                <div class="col-sm-offset-3 col-sm-6">
+                    <button class="btn btn-success" ng-click='addAllergies()'>Save Changes</button>
+                    <button class="btn btn-danger" ng-click='resetAllergies()'>Reset</button>
+                </div>
 
-                <div class="col-sm-6">
-                    <select ng-model="allergies.milk">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
+            </div>
+
+            <div class="form-group" ng-hide="orderBy==catSort">
+                <div class="col-sm-offset-3 col-sm-6">
+
+                    <div ng-repeat="allergen in allergens | orderBy: orderBy">
+                        <div ng-show="showCategory(allergen.category, orderBy)">
+                            <h4>{{allergen.category}}</h4>
+                        </div>
+                        <label ng-show="showItem(allergies[allergen.item_name].level)">
+                             <span ng-style="{'background-color': allergies[allergen.item_name].color}">
+                                 {{allergen.item}}
+                             </span>
+                            : &nbsp;
+                            <select ng-model="allergies[allergen.item_name]"
+                                    ng-options="reaction.name for reaction in reactions">
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group" ng-show="orderBy==catSort">
+                <div class="col-sm-offset-3 col-sm-6">
+
+                    <div ng-repeat="allergen in allergens | orderBy:['category','item']">
+                        <div ng-show="showCategory(allergen.category, orderBy)">
+                            <h4>{{allergen.category}}</h4>
+                        </div>
+                        <label ng-show="showItem(allergies[allergen.item_name].level)">
+                             <span ng-style="{'background-color': allergies[allergen.item_name].color}">
+                                 {{allergen.item}}
+                             </span>
+                            : &nbsp;
+                            <select ng-model="allergies[allergen.item_name]"
+                                    ng-options="reaction.name for reaction in reactions">
+                            </select>
+                        </label>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span
-                        class="soy">Soy:&nbsp;&nbsp;{{currentUser.profile.soy}}</span> </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.soy">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span class="wheat">Wheat:&nbsp;&nbsp;{{currentUser.profile.wheat}}</span>
-                </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.wheat">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span
-                        class="egg">Egg:&nbsp;&nbsp;{{currentUser.profile.egg}}</span> </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.egg">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span class="peanut">Peanut:&nbsp;&nbsp;{{currentUser.profile.peanut}}</span>
-                </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.peanut">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span
-                        class="tree_nut">Tree Nut:&nbsp;&nbsp;{{currentUser.profile.tree_nut}}</span> </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.tree_nut">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span
-                        class="fish">Fish:&nbsp;&nbsp;{{currentUser.profile.fish}}</span>
-                </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.fish">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-6 control-label"><span class="shellfish">Shellfish:&nbsp;&nbsp;{{currentUser.profile.shellfish}}</span>
-                </label>
-
-                <div class="col-sm-6">
-                    <select ng-model="allergies.shellfish">
-                        <option value="">---Please select a new allergy level---</option>
-                        <option value="0">0 - no reaction</option>
-                        <option value="1">1 - mild reaction</option>
-                        <option value="2">2 - less severe reaction</option>
-                        <option value="3">3 - severe reaction</option>
-                        <option value="4">4 - more severe reaction</option>
-                        <option value="5">5 - most severe reaction</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-sm-6">
-
-                </div>
-                <div class="col-sm-6">
-                    <button ng-click='addAllergies()'>Change Allergies</button>
-                </div>
-            </div>
         </form>
 
     </div>
