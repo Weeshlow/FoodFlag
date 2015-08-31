@@ -1,1 +1,44 @@
 /* Empty. Add your own CSS if you like */
+.img-circle.gravatar {
+  width: 40px;
+}
+
+map {
+  height: 90vh;
+}
+
+.milk {
+  background-color: orange;
+}
+
+.soy {
+  background-color: violet;
+}
+
+.wheat {
+  background-color: yellow;
+}
+
+.egg {
+  background-color: lightblue;
+}
+
+.peanut {
+  background-color: pink;
+}
+
+.tree_nut {
+  background-color: lightgreen;
+}
+
+.fish {
+  background-color: cyan;
+}
+
+.shellfish {
+  background-color: tan;
+}
+
+.unknown {
+  background-color: red;
+}

@@ -1,7 +1,11 @@
 {
-  "name": "HelloIonic",
+  "name": "FoodFlag",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.1.0"
+    "ionic": "driftyco/ionic-bower#1.1.0",
+    "angularfire": "~1.1.2",
+    "angularjs-toaster": "~0.4.15",
+    "ngGeolocation": "~0.0.8",
+    "ngmap": "~1.13.4"
   }
 }

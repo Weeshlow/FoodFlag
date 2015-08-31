@@ -1,0 +1,100 @@
+<ion-view view-title="Enter Allergies" name="home-view">
+  <ion-content class="padding">
+
+    <div class="list">
+      <div class="item">
+        <button class="button button-calm" ng-click="orderBy='';">No Sort</button>
+        <button class="button button-calm" ng-click="orderBy='order';">Rpt</button>
+        <button class="button button-calm" ng-click="orderBy=catSort">
+          Group
+        </button>
+        <button class="button button-calm" ng-click="orderBy='item';">Alpha</button>
+      </div>
+      <ul>
+
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level5">
+          </label>
+          Level 5
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level4">
+          </label>
+          Level 4
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level3">
+          </label>
+          Level 3
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level2">
+          </label>
+          Level 2
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level1">
+          </label>
+          Level 1
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="showLevel.level0">
+          </label>
+          Level 0
+        </li>
+      </ul>
+
+      <div class="item">
+        <button class="button button-balanced" ng-click='addAllergies()'>Save Changes</button>
+        <button class="button button-assertive" ng-click='resetAllergies()'>Reset</button>
+      </div>
+
+      <!-- Order not Catalog Sort -->
+      <div ng-repeat="allergen in allergens | orderBy: orderBy" ng-hide="orderBy==catSort">
+        <div class="item item-divider item-divider-royal" ng-show="showCategory(allergen.category, orderBy)">
+          {{allergen.category}}
+        </div>
+        <label class="item item-input item-select" ng-show="showItem(allergies[allergen.item_name].level)"
+               ng-style="{'background-color': allergies[allergen.item_name].color}">
+
+          <div class="input-label">
+            {{allergen.item}}
+          </div>
+
+          <select ng-model="allergies[allergen.item_name]"
+                  ng-options="reaction.name for reaction in reactions">
+          </select>
+
+        </label>
+      </div>
+
+      <!-- Catalog Sort -->
+      <div ng-repeat="allergen in allergens | orderBy: ['category','item']" ng-show="orderBy==catSort">
+        <div class="item item-divider" ng-show="showCategory(allergen.category, orderBy)">
+          {{allergen.category}}
+        </div>
+        <label class="item item-input item-select" ng-show="showItem(allergies[allergen.item_name].level)"
+               ng-style="{'background-color': allergies[allergen.item_name].color}">
+
+          <div class="input-label">
+            {{allergen.item}}
+          </div>
+
+          <select ng-model="allergies[allergen.item_name]"
+                  ng-options="reaction.name for reaction in reactions">
+          </select>
+
+        </label>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
+

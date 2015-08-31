@@ -1,0 +1,18 @@
+<ion-view view-title="Select a Restaurant" name="home-view">
+  <ion-content class="padding">
+    <map zoom="14" center="{{$geolocation.position.coords.latitude}}, {{$geolocation.position.coords.longitude}}">
+      <fusion-tables-layer
+        query="{
+        select: 'Geocodeable address',
+        from: '1KIxwwqQyayjNLUlguWQMQsImRpwrTRSR1ieuW3wW'
+        }"
+        options="{styleId: 2, templateId: 2}">
+      </fusion-tables-layer>
+      <marker
+        position="{{$geolocation.position.coords.latitude}}, {{$geolocation.position.coords.longitude}}"
+        icon="https://lh6.ggpht.com/tWNo5Up_uB17_M-y92SYsp5aA2VTGKZpnnP67WYntAUm-HbnRUmpJ9R0Mz1oxoI=h18"
+        dragable="true">
+      </marker>
+    </map>
+  </ion-content>
+</ion-view>

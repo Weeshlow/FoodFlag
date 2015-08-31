@@ -1,0 +1,79 @@
+<ion-view view-title="Home" name="home-view">
+  <ion-content class="padding">
+    <h1>Welcome to Food Flag</h1>
+
+    <h4>
+      <p>
+        With this app, we are trying to make it easier for people
+        with allergies to order food safely at restaurants.
+      </p>
+    </h4>
+    <br>
+    <!-- Hide if the user is signed in -->
+    <div class="list" ng-hide="signedIn()">
+
+      <div class="item item-button-right">
+        Create an Account
+        <button class="button button-calm" ng-click="go('app.register')">
+          Register
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Login
+        <button class="button button-calm" ng-click="go('app.login')">
+          Login
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Show if the user is signed in -->
+    <div class="list" ng-show="signedIn()">
+
+      <div class="item item-button-right" ng-show="isAdmin()">
+        View Users
+        <button class="button button-calm" ng-click="go('app.admin')">
+          Admin
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Enter Allergies
+        <button class="button button-calm" ng-click="go('app.allergies')">
+          Allergies
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Select a Restaurant
+        <button class="button button-calm" ng-click="go('app.restMap')">
+          Restaurant Map
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Menu
+        <button class="button button-calm" ng-click="go('app.menu')">
+          Menu
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Comments
+        <button class="button button-calm" ng-click="go('app.comment')">
+          Comment
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Change Password
+        <button class="button button-calm" ng-click="go('app.changePass')">
+          Change Password
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Logout
+        <button class="button button-calm" ng-click="logout()">
+          Logout
+        </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
