@@ -14,7 +14,7 @@
                     link: "http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html"
                 };
                 $scope.android = {
-                    link: "http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth"
+                    link: "http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes"
                 };
                 $scope.ios = {
                     link: "#ios",

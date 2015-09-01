@@ -47,11 +47,11 @@
           On the <a href="http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html">web</a>:<br><br>
         </li>
         <li>
-          <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
+          <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
             <img src="images/Android.png"/>
           </a>
           On Android devices through the
-          <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
+          <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
             Amazon Apps Store
           </a>.
         </li>
