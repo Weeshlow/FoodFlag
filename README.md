@@ -1,5 +1,19 @@
 <h1>Food Flag Apps</h1>
 
+  <br>
+    <center>
+      <a href="http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html">
+        <img src="images/LaptopFoodFlag.png" width="45%">
+      </a>
+      <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
+        <img src="images/AndroidFoodFlag.png" width="15%">
+      </a>&nbsp;&nbsp;&nbsp;
+      <a href="http://scottnakada.github.io/FoodFlag/#ios">
+        <img src="images/iPadFoodFlag.png" width="30%">
+      </a>
+    </center>
+  <br>
+  
   <h2>What Do These Apps Do</h2>
     <h4>
       <p>
@@ -42,13 +56,13 @@
       <ol>
         <li>
           <a href="http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html">
-            <img src="images/Web.png"/>
+            <img src="images/LaptopFoodFlag.png" height="200px"/>
           </a>
           On the <a href="http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html">web</a>:<br><br>
         </li>
         <li>
           <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
-            <img src="images/Android.png"/>
+            <img src="images/AndroidFoodFlag.png" height="200px"/>
           </a>
           On Android devices through the
           <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
@@ -57,7 +71,7 @@
         </li>
         <li>
           <a href="http://scottnakada.github.io/FoodFlag/index.html#ios">
-            <img src="images/Apple.png"/>
+            <img src="images/iPadFoodFlag.png" height="200px"/>
           </a>
           On Apple devices (iPhone/iPad), by downloading an app called Ionic View, and selecting the
           app id: <a href="#ios">f869122b</a>. See the next section for directions

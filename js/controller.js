@@ -8,16 +8,19 @@
 
                 // Links to the Platform Apps
                 $scope.web = {
-                    link: "http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html"
+                    link: "http://scottnakada.github.io/FoodFlag/yoFoodFlag/dist/public/index.html",
+                    image: "images/LaptopFoodFlag.png"
                 };
                 $scope.mean = {
                     link: "http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html"
                 };
                 $scope.android = {
-                    link: "http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes"
+                    link: "http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes",
+                    image: "images/AndroidFoodFlag.png"
                 };
                 $scope.ios = {
                     link: "#ios",
+                    image: "images/iPadFoodFlag.png",
                     ionicViewId: "f869122b"
                 };
                 $scope.github = {
